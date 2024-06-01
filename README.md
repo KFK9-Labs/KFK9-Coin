@@ -55,6 +55,6 @@ Do you have a question regarding KungFu K9? An answer is perhaps already in the
 
 
 ## License - License ⚖️
-KungFu K9 coin is released under the terms of the MIT license. Kung-Fu K9 ICO Contract is licensed under KFK9-Labs license. See
+Kung-Fu K9 Token Contract is released under the terms of the MIT license. Kung-Fu K9 ICO Contract is released under KFK9-Labs license. See
 [COPYING](COPYING) for more information or see
 [opensource.org](https://opensource.org/licenses/MIT)
