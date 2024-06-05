@@ -42,7 +42,7 @@ You can join the communities on different social media. To see what's going on, 
 * [KungFu-K9 Website](https://kfk9-coin.io)
 * [KungFu-K9 X/Twitter](https://twitter.com/KFK9_Coin)
 * [KungFu-K9 Discord](https://discord.gg/7384aCSz)
-* [KungFu-K9 Telegram](https://t.me/kfk9_coin)
+* [KungFu-K9 Telegram](https://t.me/+jJ08BbgxDMk3YzMx)
 * [KungFu-K9 Instagram](https://www.instagram.com/kfk9coin/)
 * [KungFu-K9 Facebook](https://www.facebook.com/kfk9coin)
 
