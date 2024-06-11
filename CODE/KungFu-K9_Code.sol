@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT and KFK9-Labs
 pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
@@ -78,17 +78,16 @@ contract KungFuK9 is Context, IERC20, Ownable, ReentrancyGuard {
 
     string public constant url = "https://kfk9-coin.io";
 
-    string private _name = "KungFuK9";
+    string private _name = "KungFu-K9";
     string private _symbol = "KFK9";
     uint8 private _decimals = 18;
-    uint256 private _totalSupply = 314159265358979323846264338327 * (10 ** uint256(_decimals));
+    uint256 private _totalSupply = 314159265358 * (10 ** uint256(_decimals));
     uint256 public taxFee = 2; // 2% tax fee
-    address public taxRecipient; // Address to receive tax fees
+    address public taxRecipient = 0x720d009b941005AA622D30d259c6F250DFED3Ba1; // Updated tax recipient address
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
 
-    constructor() {
-        taxRecipient = owner();
+    constructor() Ownable() ReentrancyGuard() {
         _balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
@@ -130,6 +129,7 @@ contract KungFuK9 is Context, IERC20, Ownable, ReentrancyGuard {
     function transferFrom(address sender, address recipient, uint256 amount) public override nonReentrant returns (bool) {
         _transfer(sender, recipient, amount);
         uint256 currentAllowance = _allowances[sender][_msgSender()];
+        require(currentAllowance >= amount, "ERC20: transfer amount exceeds allowance");
         _approve(sender, _msgSender(), currentAllowance.sub(amount));
         return true;
     }
